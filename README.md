@@ -19,7 +19,7 @@ This repository contains the official PyTorch implementation of the paper "Lexic
 <img src="assets/pipeline.png" width="100%"/>
 We design a unified framework, as shown in the Figure above, to extract features from different foundation models, construct a 3D feature embedding as scene embeddings, and evaluate them on multiple downstream tasks. For a complex indoor scene, existing work usually represents it with a combination of 2D and 3D modalities. Given a complex scene represented in posed images, videos, and 3D point clouds, we extract their feature embeddings with a collection of vision foundation models. For image- and video-based models, we project their features into 3D space for the subsequent 3D scene evaluation tasks with a multi-view 3D projection module. <br><br>
 
-We also visualize the scene features extracted by the vision foundation models in Figure below.
+We also visualize the scene features extracted by the vision foundation models.
 
 
 

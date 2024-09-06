@@ -57,7 +57,7 @@ Finally, please download the ScanNet dataset from the official website and follo
 
 ## Feature Extraction
 
-To extract features from the foundation models, please run the corresponding scripts in the `scripts` folder. For example, to extract features from the LSeg model, please run the following command:
+To extract features from the foundation models, please run the corresponding scripts in the `lexicon3d` folder. For example, to extract features from the LSeg model, please run the following command:
 
 ```bash
 python fusion_scannet_clip.py  --data_dir dataset/ScanNet/openscene/  --output_dir  dataset/lexicon3d/clip/ --split train --prefix clip

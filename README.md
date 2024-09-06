@@ -1,4 +1,4 @@
-# Lexicon3D: Probing Visual Encoding Models for Complex 3D Scene Understanding
+# Lexicon3D: Probing Visual Foundation Models for Complex 3D Scene Understanding
 
 <a href="https://yunzeman.github.io/" style="color:blue;">Yunze Man</a> ·
 <a href="https://zsh2000.github.io/" style="color:blue;">Shuhong Zheng</a> ·
@@ -11,7 +11,7 @@
 
 [![Framework: PyTorch](https://img.shields.io/badge/Framework-PyTorch-orange.svg)](https://pytorch.org/) [![arXiv](https://img.shields.io/badge/arXiv-page-A42C25?style=flat&logo=arXiv&logoColor=A42C25)](http://arxiv.org/abs/2409.03757) [![Project](https://img.shields.io/badge/Project-Page-green?style=flat&logo=Google%20chrome&logoColor=green)](https://yunzeman.github.io/lexicon3d/) [![GitHub](https://img.shields.io/badge/GitHub-Code-black?style=flat&logo=github&logoColor=white)](https://github.com/YunzeMan/Lexicon3D) [![License](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
-This repository contains the official PyTorch implementation of the paper "Lexicon3D: Probing Visual Encoding Models for Complex 3D Scene Understanding". The paper is available on [arXiv](http://arxiv.org/abs/2409.03757). The project page is online at [here](https://yunzeman.github.io/lexicon3d/).
+This repository contains the official PyTorch implementation of the paper "Lexicon3D: Probing Visual Foundation Models for Complex 3D Scene Understanding". The paper is available on [arXiv](http://arxiv.org/abs/2409.03757). The project page is online at [here](https://yunzeman.github.io/lexicon3d/).
 
 
 ## About
@@ -25,7 +25,7 @@ We also visualize the scene features extracted by the vision foundation models.
 If you use our work in your research, please cite our publication:
 ```bibtex
 @article{man2024lexicon3d,
-      title={Lexicon3D: Probing Visual Encoding Models for Complex 3D Scene Understanding},
+      title={Lexicon3D: Probing Visual Foundation Models for Complex 3D Scene Understanding},
       author={Man, Yunze and Zheng, Shuhong and Bao, Zhipeng and Hebert, Martial and Gui, Liang-Yan and Wang, Yu-Xiong},
       journal={arXiv preprint arXiv:2409.03757},
       year={2024} 

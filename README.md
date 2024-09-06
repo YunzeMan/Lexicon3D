@@ -9,7 +9,7 @@
 
 [arXiv Preprint] [[`Project Page`](https://yunzeman.github.io/lexicon3d/)] [[`arXiv`](http://arxiv.org/abs/2409.03757)] [[`pdf`](https://arxiv.org/pdf/2409.03757)] [[`BibTeX`](#BibTex)]
 
-[![Framework: PyTorch](https://img.shields.io/badge/Framework-PyTorch-orange.svg)](https://pytorch.org/) [![arXiv](https://img.shields.io/badge/arXiv-page-A42C25?style=flat&logo=arXiv&logoColor=A42C25)](http://arxiv.org/abs/2409.03757) [![Project](https://img.shields.io/badge/Project-Page-green?style=flat&logo=Google%20chrome&logoColor=green)](https://yunzeman.github.io/lexicon3d/) [![GitHub](https://img.shields.io/badge/GitHub-Code-black?style=flat&logo=github&logoColor=white)](https://github.com/YunzeMan/Lexicon3D) [![License](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
+[![Framework: PyTorch](https://img.shields.io/badge/Framework-PyTorch-orange.svg)](https://pytorch.org/) [![arXiv](https://img.shields.io/badge/arXiv-2409.03757-A42C25?style=flat&logo=arXiv&logoColor=A42C25)](http://arxiv.org/abs/2409.03757) [![Project](https://img.shields.io/badge/Project-Page-green?style=flat&logo=Google%20chrome&logoColor=green)](https://yunzeman.github.io/lexicon3d/) [![GitHub](https://img.shields.io/badge/GitHub-Code-black?style=flat&logo=github&logoColor=white)](https://github.com/YunzeMan/Lexicon3D) [![License](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
 This repository contains the official PyTorch implementation of the paper "Lexicon3D: Probing Visual Foundation Models for Complex 3D Scene Understanding". The paper is available on [arXiv](http://arxiv.org/abs/2409.03757). The project page is online at [here](https://yunzeman.github.io/lexicon3d/).
 

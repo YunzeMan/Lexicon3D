@@ -40,7 +40,7 @@ If you use our work in your research, please cite our publication:
 
 ## TODO
 - [ ] Document Completion
-- [ ] Evaluation and 
+- [ ] Evaluation 
 - [x] Feature visualization
 - [x] Feature extraction
 - [x] GitHub page initialization

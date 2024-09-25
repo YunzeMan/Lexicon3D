@@ -7,11 +7,11 @@
 <a href="https://cs.illinois.edu/about/people/department-faculty/lgui" style="color:blue;">Liang-Yan Gui</a> ·
 <a href="https://yxw.web.illinois.edu/" style="color:blue;">Yu-Xiong Wang</a>
 
-[arXiv Preprint] [[`Project Page`](https://yunzeman.github.io/lexicon3d/)] [[`arXiv`](http://arxiv.org/abs/2409.03757)] [[`pdf`](https://arxiv.org/pdf/2409.03757)] [[`BibTeX`](#BibTex)]
+[NeurIPS 2024] [[`Project Page`](https://yunzeman.github.io/lexicon3d/)] [[`arXiv`](http://arxiv.org/abs/2409.03757)] [[`pdf`](https://arxiv.org/pdf/2409.03757)] [[`BibTeX`](#BibTex)]
 
 [![Framework: PyTorch](https://img.shields.io/badge/Framework-PyTorch-orange.svg)](https://pytorch.org/) [![arXiv](https://img.shields.io/badge/arXiv-2409.03757-A42C25?style=flat&logo=arXiv&logoColor=A42C25)](http://arxiv.org/abs/2409.03757) [![Project](https://img.shields.io/badge/Project-Page-green?style=flat&logo=Google%20chrome&logoColor=green)](https://yunzeman.github.io/lexicon3d/) [![GitHub](https://img.shields.io/badge/GitHub-Code-black?style=flat&logo=github&logoColor=white)](https://github.com/YunzeMan/Lexicon3D) [![License](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
-This repository contains the official PyTorch implementation of the paper "Lexicon3D: Probing Visual Foundation Models for Complex 3D Scene Understanding". The paper is available on [arXiv](http://arxiv.org/abs/2409.03757). The project page is online at [here](https://yunzeman.github.io/lexicon3d/).
+This repository contains the official PyTorch implementation of the paper "Lexicon3D: Probing Visual Foundation Models for Complex 3D Scene Understanding". The paper is available on [arXiv](http://arxiv.org/abs/2409.03757). The project page is online at [here](https://yunzeman.github.io/lexicon3d/). This work is accepted by NeurIPS 2024.
 
 
 ## About
@@ -35,6 +35,7 @@ If you use our work in your research, please cite our publication:
 
 
 ## News
+* `09/25/2024`: Our paper is accepted by [NeurIPS 2024](https://neurips.cc/Conferences/2024/).
 * `09/05/2024`: Release the foundation model feature extraction and fusion scripts.
 * `06/24/2024`: GitHub page initialization.
 

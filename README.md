@@ -24,10 +24,10 @@ We also visualize the scene features extracted by the vision foundation models.
 ## BibTeX
 If you use our work in your research, please cite our publication:
 ```bibtex
-@article{man2024lexicon3d,
+@inproceedings{man2024lexicon3d,
       title={Lexicon3D: Probing Visual Foundation Models for Complex 3D Scene Understanding},
       author={Man, Yunze and Zheng, Shuhong and Bao, Zhipeng and Hebert, Martial and Gui, Liang-Yan and Wang, Yu-Xiong},
-      journal={arXiv preprint arXiv:2409.03757},
+      booktitle={NeurIPS},
       year={2024} 
       }
 ```

@@ -27,7 +27,7 @@ If you use our work in your research, please cite our publication:
 @inproceedings{man2024lexicon3d,
       title={Lexicon3D: Probing Visual Foundation Models for Complex 3D Scene Understanding},
       author={Man, Yunze and Zheng, Shuhong and Bao, Zhipeng and Hebert, Martial and Gui, Liang-Yan and Wang, Yu-Xiong},
-      booktitle={NeurIPS},
+      booktitle={Advances in Neural Information Processing Systems},
       year={2024} 
       }
 ```

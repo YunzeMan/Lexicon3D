@@ -39,13 +39,6 @@ If you use our work in your research, please cite our publication:
 * `09/05/2024`: Release the foundation model feature extraction and fusion scripts.
 * `06/24/2024`: GitHub page initialization.
 
-## TODO
-- [ ] Document Completion
-- [ ] Evaluation 
-- [x] Feature visualization
-- [x] Feature extraction
-- [x] GitHub page initialization
-
 ## Environment Setup
 
 Please install the required packages and dependencies according to the `requirements.txt` file. 
@@ -65,6 +58,13 @@ python fusion_scannet_clip.py  --data_dir dataset/ScanNet/openscene/  --output_d
 ```
 
 This script will extract features from the LSeg model for the ScanNet dataset. The extracted features will be saved in the `output_dir` folder, containing the feature embeddings, points, and voxel grids.
+
+## TODO
+- [x] Evaluation (partial)
+- [x] Feature visualization
+- [x] Feature extraction
+- [x] GitHub page initialization
+
 
 ## Acknowledgements
 This repo is built based on the fantastic work [OpenScene](https://github.com/pengsongyou/openscene). We also thank the authors of [P3DA](https://github.com/mbanani/probe3d) and the authors of all relevant visual foundation models for their great work and open-sourcing their codebase. 

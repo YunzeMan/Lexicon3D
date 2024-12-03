@@ -317,10 +317,10 @@ def qclass1(question):
 if __name__=="__main__":
 
     parser = ArgumentParser(formatter_class=ArgumentDefaultsHelpFormatter)
-    parser.add_argument("--test_file", type=str, help="Test file", default="/scratch/bbsg/yunzem2/dataset/3DLLM/pretraining/data_part2_scene_v2_3_test.json")
+    parser.add_argument("--test_file", type=str, help="Test file", default="dataset/3DLLM/pretraining/data_part2_scene_v2_3_test.json")
     parser.add_argument("--folder", type=str, help="Folder containing the results", required=True)
     parser.add_argument("--epoch", type=int, help="epoch for evaluation", required=True)
-    parser.add_argument("--pc_feat_root", type=str, help="Path to the voxelized features", default="/scratch/bbsg/yunzem2/dataset/3DLLM/finetuning_scannet/voxelized_features_sam_nonzero_preprocess")
+    parser.add_argument("--pc_feat_root", type=str, help="Path to the voxelized features", default="dataset/3DLLM/finetuning_scannet/voxelized_features_sam_nonzero_preprocess")
 
     args = parser.parse_args()
 

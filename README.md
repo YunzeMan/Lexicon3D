@@ -35,6 +35,7 @@ If you use our work in your research, please cite our publication:
 
 
 ## News
+* `12/03/2024`: Update the evaluation protocol, and update the model documentation.
 * `09/25/2024`: Our paper is accepted by [NeurIPS 2024](https://neurips.cc/Conferences/2024/).
 * `09/05/2024`: Release the foundation model feature extraction and fusion scripts.
 * `06/24/2024`: GitHub page initialization.
@@ -47,7 +48,7 @@ In addition,
 - in order to use the LSeg model, please follow [this repo](https://github.com/pengsongyou/lseg_feature_extraction) to install the necessary dependencies.
 - in order to use the Swin3D model, please follow [this repo](https://github.com/microsoft/Swin3D) and [this repo](https://github.com/Yukichiii/Swin3D_Task) to install the necessary dependencies.
 
-Finally, please download the ScanNet dataset from the official website and follow the instructions [here](https://github.com/pengsongyou/openscene/blob/main/scripts/preprocess) to preprocess the ScanNet dataset and get RGB video frames and point clouds for each scannet scene.
+**Dataset Preparation.** Download the ScanNet dataset from the [official repository](https://github.com/ScanNet/ScanNet) and follow the instructions [here](https://github.com/pengsongyou/openscene/blob/main/scripts/preprocess) to preprocess the ScanNet dataset and get RGB video frames and point clouds for each scannet scene. 
 
 ## Feature Extraction
 
@@ -59,12 +60,15 @@ python fusion_scannet_clip.py  --data_dir dataset/ScanNet/openscene/  --output_d
 
 This script will extract features from the LSeg model for the ScanNet dataset. The extracted features will be saved in the `output_dir` folder, containing the feature embeddings, points, and voxel grids.
 
-## TODO
-- [x] Evaluation (partial)
-- [x] Feature visualization
-- [x] Feature extraction
-- [x] GitHub page initialization
+## Evaluation on Downstream Tasks
 
+For evaluation, we provide the scripts to evaluate the extracted features on the downstream tasks. Detailed instructions can be found in the `evals` folder. For example, to evaluate the extracted features on the 3D Question Answering task, please cd to the `evals/3D-LLM/3DLLM_BLIP2-base` folder and run the following command:
+
+```bash
+python -m torch.distributed.run --nproc_per_node=4 train.py --cfg-path lavis/projects/blip2/train/finetune_sqa.yaml
+```
+
+Refer to the `evals` folder for more details on the evaluation scripts.
 
 ## Acknowledgements
 This repo is built based on the fantastic work [OpenScene](https://github.com/pengsongyou/openscene). We also thank the authors of [P3DA](https://github.com/mbanani/probe3d) and the authors of all relevant visual foundation models for their great work and open-sourcing their codebase. 

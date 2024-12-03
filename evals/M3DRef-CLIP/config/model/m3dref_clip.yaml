@@ -1,0 +1,63 @@
+# Managed by Hydra
+
+model_name:
+  _target_: m3drefclip.model.m3dref_clip.M3DRefCLIP
+
+network:
+  max_num_proposals: 80
+  use_contrastive_loss: True
+  clip_model: ViT-B/32
+  use_2d_feature: True
+  use_3d_features: True
+
+  detector:
+    output_channel: 32
+    use_gt_proposal: False
+
+  object_renderer:
+    eye: [[0.86, 0.5, 1], [-0.86, 0.5, 1], [0, -1, 1]]
+    rasterizer_setting:
+      image_size: 224
+      radius: 0.025
+      points_per_pixel: 3
+      bin_size: 0
+
+  clip_word_encoder:
+    _target_: m3drefclip.model.language_module.clip_word_encoder.CLIPWordEncoder
+    output_channel: 128
+    dropout: 0.1
+
+  clip_img_encoder:
+    output_channel: 128
+    dropout: 0.1
+
+  matching_module:
+    feat_channel: 128
+    head: 4
+    depth: 2
+
+optimizer:
+  _target_: torch.optim.AdamW
+  lr: 0.0005
+  weight_decay: 0.00001
+
+lr_decay:
+  start_epoch: 30
+
+loss:
+  reference_bce_loss:
+    _target_: m3drefclip.loss.reference_loss.RefBCELoss
+    iou_threshold: 0.5
+    matching_strategy: hungarian
+
+  reference_ce_loss:
+    _target_: m3drefclip.loss.reference_loss.RefCELoss
+    iou_threshold: 0
+
+  contrastive_loss:
+    _target_: m3drefclip.loss.contrastive_loss.SinglePairContrastiveLoss
+    temperature: 2.6593
+    split_batch: False
+
+inference:
+  output_threshold: 0.1

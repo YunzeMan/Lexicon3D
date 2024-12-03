@@ -1,0 +1,36 @@
+# Managed by Hydra
+
+defaults:
+  - base
+
+scene_dataset: ScanNetv2
+scene_dataset_path: ${data.data_root_path}/scannetv2
+raw_scene_path: ${data.scene_dataset_path}/scans
+
+scene_metadata:
+  metadata_root_path: ${data.scene_dataset_path}/metadata
+  train_scene_ids: ${data.scene_metadata.metadata_root_path}/scannetv2_train.txt
+  val_scene_ids: ${data.scene_metadata.metadata_root_path}/scannetv2_val.txt
+  test_scene_ids: ${data.scene_metadata.metadata_root_path}/scannetv2_test.txt
+
+  label_mapping_file: ${data.scene_metadata.metadata_root_path}/scannetv2-labels.combined.tsv
+  semantic_mapping_name: "nyu40"
+  invalid_semantic_labels: []
+  valid_semantic_mapping: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 24, 28, 33, 34, 36, 39]  # skip floor, wall and ceiling
+  scene_multiview_file: ${data.scene_dataset_path}/enet_feats_maxpool.hdf5
+
+max_num_point: 250000
+
+semantic_class: 20
+
+scene_augmentation:
+  jitter_xyz: True
+  flip_x: True
+  rotate_z: True
+
+voxel_size: 0.02  # 0.02m
+
+point_features:
+  use_rgb: False
+  use_normal: True
+  use_multiview: True

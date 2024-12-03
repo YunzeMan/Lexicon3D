@@ -1,0 +1,22 @@
+# Managed by Hydra
+
+defaults:
+  - scannetv2
+
+lang_dataset: Nr3D
+lang_dataset_path: ${data.data_root_path}/nr3d
+
+lang_metadata:
+  metadata_root_path: ${data.lang_dataset_path}/metadata
+  train_language_data: ${data.lang_metadata.metadata_root_path}/nr3d_train.csv
+  val_language_data: ${data.lang_metadata.metadata_root_path}/nr3d_test.csv
+  test_language_data: ${data.lang_metadata.metadata_root_path}/nr3d_test.csv
+
+chunk_size: 8
+
+evaluator:
+  _target_: m3drefclip.evaluation.referit3d_evaluator.ReferIt3DEvaluator
+  verbose: False
+  metric_name: accuracy
+
+monitor_value: accuracy_overall

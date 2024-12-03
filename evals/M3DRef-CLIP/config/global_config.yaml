@@ -1,0 +1,55 @@
+# Managed by Hydra
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .
+
+defaults:
+  - _self_
+  - model: m3dref_clip
+  - data: base
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+project_root_path: ${hydra:runtime.cwd}
+experiment_output_path: ${project_root_path}/output/${data.lang_dataset}/${experiment_name}
+pred_path: ${experiment_output_path}/inference
+
+ckpt_path: null
+experiment_name: null
+train_seed: 123
+test_seed: 123
+
+logger:
+  # https://pytorch-lightning.readthedocs.io/en/stable/extensions/generated/pytorch_lightning.loggers.WandbLogger.html
+  _target_: lightning.pytorch.loggers.WandbLogger
+  project: M3DRef-CLIP
+  name: ${experiment_name}
+  save_dir: ${experiment_output_path}/training
+
+  # https://pytorch-lightning.readthedocs.io/en/stable/api/pytorch_lightning.loggers.tensorboard.html
+  #  _target_: lightning.pytorch.loggers.TensorBoardLogger
+  #  project: M3DRef-CLIP
+  #  name: ${experiment_name}
+
+# https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html
+trainer:
+  accelerator: gpu
+  max_epochs: 60
+  num_sanity_val_steps: 0
+  check_val_every_n_epoch: 2
+  profiler: simple
+  precision: 32
+  reload_dataloaders_every_n_epochs: 1  # for shuffling language data chunks
+
+# https://pytorch-lightning.readthedocs.io/en/stable/api/pytorch_lightning.callbacks.ModelCheckpoint.html
+checkpoint_monitor:
+  _target_: lightning.pytorch.callbacks.ModelCheckpoint
+  monitor: val_eval/${data.monitor_value}
+  mode: max
+  save_last: True
+  save_top_k: 3
+  every_n_epochs: ${trainer.check_val_every_n_epoch}
+  filename: "{epoch}"
+  dirpath: ${experiment_output_path}/training

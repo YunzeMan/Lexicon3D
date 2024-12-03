@@ -1,6 +1,6 @@
 # Evaluation on Downstream Tasks 
 ---
-This folder contains the evaluation scripts for the downstream tasks. For each task, we provide minimal codes required to evaluate the extracted features. For more details, please refer to the original repositories of the downstream tasks. 
+This folder contains the evaluation scripts for the downstream tasks. For each task, we provide *minimal* codes required to evaluate the extracted features. For more details, please refer to the original repositories of the downstream tasks. 
 
 ### 3D Scene Reasoning: Question Answering
 
@@ -14,6 +14,8 @@ For the scene reasoning task, we use the 3D-LLM model to evaluate the extracted 
 python -m torch.distributed.run --nproc_per_node=4 train.py --cfg-path lavis/projects/blip2/train/finetune_sqa.yaml
 ```
 
-The core modification is to replace the input features with the extracted features from the foundation models. To achieve this, you need to modify the configuration files in `lavis/projects/blip2/train` to specify the location to the extracted features and the visual feature channels.
+The core modifications from the [official implementation](https://github.com/UMass-Foundation-Model/3D-LLM/tree/main/3DLLM_BLIP2-base) are:
 
-In addition, the dataloaders have to be slightly modified to load the extracted features. You can refer to the `lavis/datasets/datasets/threedvqa_datasets.py` for the modified dataloader implementation.
+- Replace the input features with the extracted features from the foundation models. To achieve this, you need to modify the configuration files in `lavis/projects/blip2/train` to specify the location to the extracted features and the visual feature channels.
+- In addition, the dataloaders have to be slightly modified to load the extracted features. You can refer to the `lavis/datasets/datasets/threedvqa_datasets.py` for the modified dataloader implementation.
+- Other minor modifications are required to adapt the model to the extracted features.
